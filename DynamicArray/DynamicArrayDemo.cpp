@@ -1,7 +1,8 @@
 #include<iostream>
 #include"DynamicArray.h"
 
-int main() {
+int main() 
+{
 	DynamicArray d;
 
 	d.push_back(1.4);

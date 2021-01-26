@@ -87,6 +87,7 @@ void DynamicArray::push_front(const double& value)
 	m_data[0] = value;
 	m_size++;
 }
+
 void DynamicArray::pop_front() 
 {
 	erase(0, 1);
@@ -112,7 +113,7 @@ double& DynamicArray::at(size_t index)
 {
 	if(index < 0 && index >= m_size)
 	{
-		throw "Bad index!";
+		throw "Invalid index value!";
 	}
 
 	return m_data[index];
@@ -122,7 +123,7 @@ double& DynamicArray::operator[](size_t index)
 {
 	if (index < 0 || index >= (size_t)m_size)
 	{
-		throw "Bad index!";
+		throw "Invalid index value!";
 	}
 
 	return m_data[index];
